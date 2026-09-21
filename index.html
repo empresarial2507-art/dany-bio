@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dany Carter</title>
+<meta name="description" content="Vida real em vídeos. Os links, os cupons e tudo que a Dany Carter testou e aprovou, num lugar só.">
+<meta property="og:title" content="Dany Carter">
+<meta property="og:description" content="Vida real em vídeos. Meus links, meus cupons e tudo que eu já testei e aprovei.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.danycartter.com/">
+<meta property="og:image" content="https://www.danycartter.com/img/og.png">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* ==========================================================================
+   DANY CARTER  .  LINK DA BIO
+   O que você edita fica no bloco "CONTEÚDO DO SITE" lá embaixo, no final
+   do arquivo. Daqui até lá é só a aparência.
+   ========================================================================== */
+
+/* ---- CORES: tema claro (padrão) ---- */
+:root{
+  --fundo:#FFFFFF;
+  --papel:#F6F4F1;
+  --carta:#FFFFFF;
+  --tinta:#171512;
+  --tinta-2:#6B655E;
+  --tinta-3:#A39C93;
+  --fio:rgba(23,21,18,.10);
+  --fio-forte:rgba(23,21,18,.20);
+  --cafe:#5C3F2E;
+  --latte-1:#F3EAE1;
+  --latte-2:#DEC6B0;
+  --brilho:rgba(255,255,255,.8);
+  --botao-fundo:#171512;
+  --botao-texto:#FFFFFF;
+  --sombra:0 30px 50px -30px rgba(23,21,18,.38);
+  --sombra-foto:0 30px 34px rgba(23,21,18,.26);
+  --grao:.32;
+  color-scheme:light;
+}
+/* ---- CORES: tema escuro (tema: "escuro", ou "auto" seguindo o celular) ---- */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --fundo:#131110;
+    --papel:#1C1917;
+    --carta:#1C1917;
+    --tinta:#F4F0EA;
+    --tinta-2:#ABA39A;
+    --tinta-3:#6F685F;
+    --fio:rgba(244,240,234,.11);
+    --fio-forte:rgba(244,240,234,.22);
+    --cafe:#DDB998;
+    --latte-1:#3E3129;
+    --latte-2:#221A15;
+    --brilho:rgba(255,255,255,.14);
+    --botao-fundo:#F4F0EA;
+    --botao-texto:#171512;
+    --sombra:0 30px 50px -26px rgba(0,0,0,.75);
+    --sombra-foto:0 30px 34px rgba(0,0,0,.5);
+    --grao:.22;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --fundo:#131110;
+  --papel:#1C1917;
+  --carta:#1C1917;
+  --tinta:#F4F0EA;
+  --tinta-2:#ABA39A;
+  --tinta-3:#6F685F;
+  --fio:rgba(244,240,234,.11);
+  --fio-forte:rgba(244,240,234,.22);
+  --cafe:#DDB998;
+  --latte-1:#3E3129;
+  --latte-2:#221A15;
+  --brilho:rgba(255,255,255,.14);
+  --botao-fundo:#F4F0EA;
+  --botao-texto:#171512;
+  --sombra:0 30px 50px -26px rgba(0,0,0,.75);
+  --sombra-foto:0 30px 34px rgba(0,0,0,.5);
+  --grao:.22;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--fundo);
+  color:var(--tinta);
+  font-family:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--cafe);outline-offset:3px;border-radius:8px}
+
+/* ---- coluna ---- */
+.pagina{
+  width:100%;max-width:500px;margin:0 auto;
+  padding-block:22px calc(44px + env(safe-area-inset-bottom,0px));
+  padding-inline:20px;
+  display:flex;flex-direction:column;gap:40px;
+}
+
+/* ---- apresentacao ---- */
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-top:44px}
+.painel{
+  position:relative;width:100%;max-width:400px;aspect-ratio:1/1.08;
+  border-radius:32px;
+  background:
+    radial-gradient(85% 60% at 80% 6%,var(--brilho),transparent 62%),
+    linear-gradient(168deg,var(--latte-1),var(--latte-2));
+  clip-path:inset(-140px 0 0 0 round 32px);
+}
+.painel::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;opacity:var(--grao);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  mix-blend-mode:soft-light;pointer-events:none;
+}
+.painel .oi{
+  position:absolute;left:6px;top:-34px;z-index:2;
+  font-family:"Bodoni Moda","Bodoni 72","Didot","Georgia",serif;
+  font-optical-sizing:auto;font-style:italic;font-weight:400;
+  font-size:24px;line-height:1;color:var(--cafe);
+}
+.painel .foto{
+  position:absolute;left:50%;bottom:0;z-index:1;
+  width:83%;max-width:none;height:auto;
+  transform:translateX(-50%);
+  filter:drop-shadow(var(--sombra-foto));
+  animation:pousa 1.4s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes pousa{from{transform:translateX(-50%) translateY(14px) scale(1.012)}to{transform:translateX(-50%)}}
+.painel.falta{border:1px dashed var(--fio-forte)}
+.painel.falta::after{
+  content:"falta a foto " attr(data-arquivo);
+  position:absolute;inset:auto 0 18px;text-align:center;font-size:12px;color:var(--tinta-2);
+}
+
+.nome{
+  font-family:"Bodoni Moda","Bodoni 72","Didot","Georgia",serif;
+  font-optical-sizing:auto;
+  font-size:clamp(46px,13.5vw,60px);line-height:.96;font-weight:500;letter-spacing:-.012em;
+  text-wrap:balance;margin-top:6px;
+}
+.nome em{font-style:italic;font-weight:400;color:var(--cafe)}
+.assinatura{
+  font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--tinta-3);margin-top:-8px;
+}
+.bio{font-size:15.5px;color:var(--tinta-2);max-width:32ch;text-wrap:balance}
+.bio b{color:var(--tinta);font-weight:500}
+
+.redes{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.redes a{
+  width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--fio-forte);
+  display:grid;place-items:center;
+  transition:background .3s,color .3s,border-color .3s,transform .3s;
+}
+.redes a:hover{background:var(--tinta);color:var(--fundo);border-color:var(--tinta);transform:translateY(-2px)}
+.redes svg{width:18px;height:18px;fill:currentColor}
+
+/* ---- rotulos ---- */
+.rotulo{
+  font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--tinta-3);
+}
+.secao-titulo{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.secao-titulo::after{content:"";flex:1;height:1px;background:var(--fio)}
+
+/* ---- botoes ---- */
+.botao{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:16px 22px;border-radius:999px;
+  background:var(--botao-fundo);color:var(--botao-texto);
+  font-size:15px;font-weight:500;letter-spacing:.01em;line-height:1;
+  transition:transform .3s cubic-bezier(.2,.8,.3,1),opacity .3s;
+}
+.botao:hover{transform:translateY(-2px)}
+.botao svg{width:16px;height:16px;flex:none;transition:transform .3s}
+.botao:hover svg{transform:translateX(3px)}
+.botao.contorno{background:transparent;color:var(--tinta);border:1px solid var(--fio-forte)}
+.botao.contorno:hover{border-color:var(--tinta)}
+
+/* ==========================================================================
+   BANNERS  (cada link é um banner clicável com imagem)
+   ========================================================================== */
+.banners{display:flex;flex-direction:column;gap:14px}
+.banner{
+  position:relative;display:block;overflow:hidden;
+  border-radius:24px;border:1px solid var(--fio);
+  background:var(--papel);box-shadow:var(--sombra);
+  transition:transform .35s cubic-bezier(.2,.8,.3,1);
+  -webkit-tap-highlight-color:transparent;
+}
+.banner:hover{transform:translateY(-3px)}
+.banner:active{transform:scale(.99)}
+.banner .quadro{position:relative;overflow:hidden;background:var(--papel)}
+.banner .quadro img{
+  width:100%;height:auto;display:block;
+  transition:transform .6s cubic-bezier(.2,.8,.3,1);
+}
+.banner:hover .quadro img{transform:scale(1.035)}
+
+/* modo FOTO: recorte fixo, escurece um lado e o texto entra por cima */
+.banner[data-modo="foto"] .quadro{aspect-ratio:16/7}
+.banner[data-modo="foto"] .quadro img{height:100%;object-fit:cover;object-position:50% 50%}
+.banner[data-foco="topo"] .quadro img{object-position:50% 0}
+.banner[data-foco="baixo"] .quadro img{object-position:50% 100%}
+.banner[data-modo="foto"] .quadro::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(96deg,rgba(23,21,18,.9) 0%,rgba(23,21,18,.62) 42%,rgba(23,21,18,.04) 82%);
+}
+.banner[data-lado="direita"] .quadro::after{
+  background:linear-gradient(276deg,rgba(23,21,18,.9) 0%,rgba(23,21,18,.62) 42%,rgba(23,21,18,.04) 82%);
+}
+.banner .legenda{
+  position:absolute;left:22px;right:66px;top:0;bottom:0;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;gap:5px;
+  pointer-events:none;
+}
+.banner[data-lado="direita"] .legenda{left:66px;right:22px;text-align:right;align-items:flex-end}
+.banner .legenda strong{
+  font-family:"Bodoni Moda","Bodoni 72","Didot","Georgia",serif;
+  font-optical-sizing:auto;
+  font-size:25px;line-height:1.04;font-weight:500;letter-spacing:-.008em;
+  color:#FFFFFF;text-wrap:balance;
+}
+.banner .legenda span{font-size:13px;line-height:1.35;color:rgba(255,255,255,.82)}
+
+/* seta que mostra que o banner é clicável */
+.banner .marca{
+  position:absolute;right:14px;bottom:14px;z-index:3;
+  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  background:#FFFFFF;color:#171512;
+  box-shadow:0 10px 20px -8px rgba(0,0,0,.55);
+  transition:transform .3s;
+}
+.banner:hover .marca{transform:scale(1.08)}
+.banner .marca svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.banner .cobre{position:absolute;inset:0;z-index:1}
+
+/* cupom dentro do banner: toca e copia */
+.banner .cupom{
+  position:absolute;left:22px;bottom:16px;z-index:4;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 11px 7px 12px;border-radius:999px;
+  border:1px dashed rgba(255,255,255,.6);
+  background:rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  font-size:11.5px;font-weight:600;letter-spacing:.12em;color:#FFFFFF;
+  transition:background .3s,border-color .3s;
+}
+.banner[data-lado="direita"] .cupom{left:auto;right:22px}
+.banner .cupom svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.banner .cupom:hover{background:rgba(255,255,255,.24)}
+.banner .cupom.ok{border-style:solid;background:#FFFFFF;color:#171512;border-color:#FFFFFF}
+.banner[data-cupom] .legenda{bottom:44px}
+
+/* a CAPA: o banner maior do produto principal */
+.banner.capa .quadro{aspect-ratio:4/5}
+.banner.capa .quadro img{height:100%;object-fit:cover;object-position:50% 0}
+.banner.capa .quadro::after{
+  background:linear-gradient(to top,rgba(23,21,18,.94) 0%,rgba(23,21,18,.7) 30%,rgba(23,21,18,.25) 52%,rgba(23,21,18,0) 68%);
+}
+.banner.capa .selo{
+  position:absolute;left:18px;top:18px;z-index:2;
+  font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#FFFFFF;
+  padding:8px 13px;border-radius:999px;
+  background:rgba(23,21,18,.28);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);
+}
+.banner.capa .legenda{
+  left:20px;right:20px;top:auto;bottom:20px;justify-content:flex-end;gap:9px;
+}
+.banner.capa .legenda strong{font-size:34px;line-height:.98}
+.banner.capa .legenda p{font-size:14px;line-height:1.45;color:rgba(255,255,255,.86);max-width:38ch}
+.banner.capa .preco{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;color:#FFFFFF}
+.banner.capa .preco b{font-size:16px;font-weight:600}
+.banner.capa .preco span{font-size:13px;color:rgba(255,255,255,.75)}
+.banner.capa .botao{background:#FFFFFF;color:#171512;margin-top:6px;padding:15px 20px}
+.banner.capa .marca{display:none}
+
+/* espaço reservado quando a imagem ainda não foi enviada */
+.banner.vazio .quadro{aspect-ratio:16/7;display:grid;place-items:center;border:1px dashed var(--fio-forte);border-radius:inherit}
+.banner.vazio .quadro img,.banner.vazio .quadro::after{display:none}
+.banner.vazio .legenda{display:none}
+.banner.vazio .falta{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:14px}
+.banner.vazio .falta b{font-family:"Bodoni Moda","Georgia",serif;font-size:19px;font-weight:500}
+.banner.vazio .falta small{font-size:11px;color:var(--tinta-2);background:var(--carta);border:1px solid var(--fio);border-radius:7px;padding:3px 8px;word-break:break-all}
+
+/* ---- a frase ---- */
+.frase{
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  text-align:center;padding:6px 12px;
+}
+.frase::before{content:"";width:30px;height:1px;background:var(--fio-forte)}
+.frase p{
+  font-family:"Bodoni Moda","Bodoni 72","Didot","Georgia",serif;
+  font-optical-sizing:auto;font-style:italic;font-weight:400;
+  font-size:27px;line-height:1.2;text-wrap:balance;max-width:19ch;
+}
+.frase small{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--tinta-3)}
+
+/* ---- parcerias ---- */
+.parcerias{
+  background:var(--papel);border-radius:28px;padding:26px 24px 24px;
+  display:flex;flex-direction:column;gap:14px;align-items:flex-start;
+}
+.parcerias h2{
+  font-family:"Bodoni Moda","Bodoni 72","Didot","Georgia",serif;
+  font-optical-sizing:auto;
+  font-size:26px;line-height:1.05;font-weight:500;letter-spacing:-.005em;text-wrap:balance;
+}
+.parcerias p{font-size:14.5px;color:var(--tinta-2);max-width:36ch}
+.parcerias .botao{margin-top:4px;word-break:break-all}
+.parcerias .alcance{font-size:12.5px;color:var(--tinta-3);margin-top:-2px}
+
+/* ---- rodape ---- */
+.rodape{text-align:center;font-size:12px;letter-spacing:.06em;color:var(--tinta-3)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<main class="pagina" id="pagina"></main>
+
+<script>
+/* ==========================================================================
+   CONTEÚDO DO SITE
+   Troque só o que está entre aspas. Não apague vírgulas, chaves { } nem
+   colchetes [ ]. Para tirar um banner, apague o bloco inteiro dele, do { ao },
+   ========================================================================== */
+const CONTEUDO = {
+
+  tema: "claro",          // "claro", "escuro" ou "auto" (segue o celular de quem abre)
+
+  /* ---- 1. O topo ------------------------------------------------------- */
+  saudacao:   "Oi, gente!",
+  nome:       "Dany",
+  sobrenome:  "Carter",   // aparece em itálico
+  assinatura: "Vida real em vídeos",
+  bio:        "Você está no lugar certo. Aqui ficam meus links, meus cupons e tudo que eu já testei e aprovei.",
+  foto:       "img/dany.webp",   // foto recortada, sem fundo
+
+  /* ---- 2. As redes ----------------------------------------------------- */
+  redes: [
+    { rede: "instagram", url: "https://www.instagram.com/danycartter/" },
+    { rede: "tiktok",    url: "https://www.tiktok.com/@danycartter" },
+    { rede: "youtube",   url: "https://www.youtube.com/@DanyCartter" },
+    { rede: "spotify",   url: "https://open.spotify.com/show/77YJjl6DhsELsuT4zCybY0" }
+  ],
+
+  /* ---- 3. A capa: o banner grande do seu produto principal ------------- */
+  capa: {
+    selo:      "Meu curso",
+    titulo:    "Sua vida em vlogs",
+    texto:     "Como editar no CapCut e criar vídeos que prendem, do jeito que eu faço os meus.",
+    preco:     "R$ 97,50",
+    parcelado: "ou 3x de R$ 34,79",
+    botao:     "Quero fazer o curso",
+    url:       "https://hotmart.com/pt-br/marketplace/produtos/sua-vida-em-videos-com-capcut/E95068281V",
+    foto:      "img/banner-curso.webp"
+  },
+
+  /* ---- 4. Os links (cada um é um banner clicável) ----------------------
+     Cada bloco { ... } é um banner. Para DUPLICAR, copie um bloco inteiro,
+     do { até o }, e cole logo abaixo. Para TIRAR, apague o bloco.
+
+     Existem dois jeitos de pôr imagem, escolha UM por banner:
+       foto: "img/x.webp"   é uma foto. O título e o texto são escritos por cima.
+       arte: "img/x.webp"   a imagem JÁ TEM o texto escrito nela (banner pronto).
+                            Aí nada é escrito por cima.
+
+     No modo foto você ainda pode escolher:
+       foco: "topo"  |  "centro" (padrão)  |  "baixo"      que parte da foto aparece
+       lado: "esquerda" (padrão)  |  "direita"             de que lado fica o texto
+       cupom: "CODIGO"                                      mostra uma etiqueta que copia o cupom
+     --------------------------------------------------------------------- */
+  links_titulo: "Meus links",
+  links: [
+    {
+      titulo: "Favoritos da Shopee",
+      texto:  "O que eu uso em casa, numa lista só",
+      url:    "https://collshp.com/danycarter",
+      arte:   "img/banner-shopee.webp"
+    },
+    {
+      titulo: "Dux Nutrition",
+      texto:  "15% de desconto com o meu cupom",
+      url:    "https://www.duxnutrition.com/?utm_source=influenciadores&utm_medium=affiliate&utm_campaign=DANYCARTTER&cupom=DANYCARTTER",
+      foto:   "img/banner-dux.webp",
+      foco:   "topo",
+      cupom:  "DANYCARTTER"
+    },
+    {
+      titulo: "Podcast Falando Sozinha",
+      texto:  "Um café e um papo sem filtro",
+      url:    "https://open.spotify.com/show/77YJjl6DhsELsuT4zCybY0?si=a654ae6042ca4ec8",
+      foto:   "img/banner-podcast.webp",
+      foco:   "topo"
+    },
+    {
+      titulo: "Meu canal no YouTube",
+      texto:  "Casa, faxina, compras e rotina",
+      url:    "https://www.youtube.com/channel/UCRXYnblRhsGY33JoMRppiEw",
+      arte:   "img/banner-youtube.webp"
+    }
+  ],
+
+  /* ---- 5. A frase (deixe texto: "" para esconder) ---------------------- */
+  frase: {
+    texto: "Ninguém permanece o mesmo depois de se conhecer.",
+    autor: "Dany Carter"
+  },
+
+  /* ---- 6. Parcerias ---------------------------------------------------- */
+  parcerias: {
+    titulo:  "Parcerias e publicidade",
+    texto:   "Para campanhas e publicidade, fale com a minha assessoria comercial, o Grupo Farol.",
+    email:   "dany.carter@farol.ag",
+    alcance: "Instagram, TikTok e YouTube. Mais de 4 milhões de pessoas."
+  },
+
+  rodape: "Dany Carter"
+};
+/* ========================== fim do conteúdo ============================= */
+</script>
+
+<script>
+(function(){
+  const c = CONTEUDO;
+  const raiz = document.documentElement;
+  if (c.tema === "escuro") raiz.dataset.theme = "dark";
+  else if (c.tema === "auto") delete raiz.dataset.theme;
+  else raiz.dataset.theme = "light";
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+
+  const ICONES = {
+    instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>',
+    tiktok: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>',
+    youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>',
+    spotify: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
+  };
+  const NOMES = {instagram:"Instagram",tiktok:"TikTok",youtube:"YouTube",spotify:"Spotify"};
+  const SETA   = '<svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  const SETA_D = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+  const COPIA  = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A1.5 1.5 0 0 1 6.5 5H15"/></svg>';
+  const EMAIL  = '<svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>';
+
+  let h = "";
+
+  // 1 e 2. topo
+  h += `<header class="hero">
+    <div class="painel" data-arquivo="${esc(c.foto)}">
+      ${c.saudacao ? `<span class="oi">${esc(c.saudacao)}</span>` : ""}
+      <img class="foto" src="${esc(c.foto)}" alt="${esc(c.nome + " " + c.sobrenome)}" fetchpriority="high">
+    </div>
+    <h1 class="nome">${esc(c.nome)} <em>${esc(c.sobrenome)}</em></h1>
+    ${c.assinatura ? `<p class="assinatura">${esc(c.assinatura)}</p>` : ""}
+    ${c.bio ? `<p class="bio">${esc(c.bio)}</p>` : ""}
+    ${c.redes && c.redes.length ? `<nav class="redes" aria-label="Redes sociais">${c.redes.map(r =>
+      `<a href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="${esc(NOMES[r.rede] || r.rede)}">${ICONES[r.rede] || ""}</a>`).join("")}</nav>` : ""}
+  </header>`;
+
+  // 3. capa
+  const d = c.capa;
+  if (d && d.titulo) {
+    h += `<a class="banner capa" data-modo="foto" data-titulo="${esc(d.titulo)}" data-arquivo="${esc(d.foto)}" href="${esc(d.url)}" target="_blank" rel="noopener">
+      <div class="quadro"><img src="${esc(d.foto)}" alt="" fetchpriority="high"></div>
+      ${d.selo ? `<span class="selo">${esc(d.selo)}</span>` : ""}
+      <div class="legenda">
+        <strong>${esc(d.titulo)}</strong>
+        ${d.texto ? `<p>${esc(d.texto)}</p>` : ""}
+        ${(d.preco || d.parcelado) ? `<div class="preco">${d.preco ? `<b>${esc(d.preco)}</b>` : ""}${d.parcelado ? `<span>${esc(d.parcelado)}</span>` : ""}</div>` : ""}
+        <span class="botao">${esc(d.botao || "Saiba mais")}${SETA}</span>
+      </div>
+    </a>`;
+  }
+
+  // 4. banners
+  if (c.links && c.links.length) {
+    h += `<section aria-label="${esc(c.links_titulo || "Links")}">
+      ${c.links_titulo ? `<div class="secao-titulo"><span class="rotulo">${esc(c.links_titulo)}</span></div>` : ""}
+      <div class="banners">${c.links.map(l => {
+        const modo = l.arte ? "arte" : "foto";
+        const img = l.arte || l.foto || "";
+        return `
+        <div class="banner" data-modo="${modo}" data-foco="${esc(l.foco || "centro")}" data-lado="${esc(l.lado || "esquerda")}" ${l.cupom ? 'data-cupom="1"' : ""} data-titulo="${esc(l.titulo)}" data-arquivo="${esc(img)}">
+          <div class="quadro"><img src="${esc(img)}" alt="" loading="lazy" decoding="async"></div>
+          ${modo === "foto" ? `<div class="legenda"><strong>${esc(l.titulo)}</strong>${l.texto ? `<span>${esc(l.texto)}</span>` : ""}</div>` : ""}
+          ${l.cupom ? `<button type="button" class="cupom" data-cupom="${esc(l.cupom)}" aria-label="Copiar cupom ${esc(l.cupom)}"><span>${esc(l.cupom)}</span>${COPIA}</button>` : ""}
+          <span class="marca" aria-hidden="true">${SETA_D}</span>
+          <a class="cobre" href="${esc(l.url)}" target="_blank" rel="noopener" aria-label="${esc(l.titulo)}"></a>
+        </div>`; }).join("")}
+      </div>
+    </section>`;
+  }
+
+  // 5. frase
+  if (c.frase && c.frase.texto) {
+    h += `<figure class="frase">
+      <blockquote><p>${esc(c.frase.texto)}</p></blockquote>
+      ${c.frase.autor ? `<figcaption><small>${esc(c.frase.autor)}</small></figcaption>` : ""}
+    </figure>`;
+  }
+
+  // 6. parcerias
+  const p = c.parcerias;
+  if (p && (p.email || p.texto)) {
+    h += `<section class="parcerias">
+      ${p.titulo ? `<h2>${esc(p.titulo)}</h2>` : ""}
+      ${p.texto ? `<p>${esc(p.texto)}</p>` : ""}
+      ${p.email ? `<a class="botao contorno" href="mailto:${esc(p.email)}">${EMAIL}${esc(p.email)}</a>` : ""}
+      ${p.alcance ? `<span class="alcance">${esc(p.alcance)}</span>` : ""}
+    </section>`;
+  }
+
+  h += `<footer class="rodape">© ${new Date().getFullYear()} ${esc(c.rodape || "")}</footer>`;
+
+  document.getElementById("pagina").innerHTML = h;
+
+  // imagem que faltou vira um espaço reservado, em vez de quebrar o site
+  document.querySelector(".painel .foto")?.addEventListener("error", e => e.target.parentElement.classList.add("falta"));
+  document.querySelectorAll(".banner .quadro img").forEach(img => {
+    img.addEventListener("error", () => {
+      const b = img.closest(".banner");
+      b.classList.add("vazio");
+      b.querySelector(".quadro").insertAdjacentHTML("beforeend",
+        `<div class="falta"><b>${esc(b.dataset.titulo || "")}</b><small>falta a imagem ${esc(b.dataset.arquivo || "")}</small></div>`);
+    });
+  });
+
+  // cupom: toca e copia
+  document.querySelectorAll(".cupom").forEach(b => {
+    b.addEventListener("click", async () => {
+      const codigo = b.dataset.cupom, rotulo = b.querySelector("span");
+      try { await navigator.clipboard.writeText(codigo); } catch (e) {}
+      b.classList.add("ok"); rotulo.textContent = "Copiado";
+      setTimeout(() => { b.classList.remove("ok"); rotulo.textContent = codigo; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
