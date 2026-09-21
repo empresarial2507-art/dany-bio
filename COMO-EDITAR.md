@@ -143,7 +143,24 @@ quando a pessoa toca.
 },
 ```
 
-## Trocar a imagem de um banner
+## Qual arquivo é qual banner
+
+| Banner                    | Arquivo em `img/`      | Tamanho ideal        | Modo   |
+|---------------------------|------------------------|----------------------|--------|
+| Foto do topo              | `dany.webp`            | 900 x 1250, sem fundo | foto  |
+| Capa (curso)              | `banner-curso.webp`    | 800 x 1000 (em pé)   | foto   |
+| Favoritos da Shopee       | `banner-shopee.webp`   | 920 x 400            | arte   |
+| Dux Nutrition             | `banner-dux.webp`      | 920 x 400            | foto   |
+| Podcast Falando Sozinha   | `banner-podcast.webp`  | 920 x 400            | foto   |
+| Meu canal no YouTube      | `banner-youtube.webp`  | 920 x 400            | arte   |
+| Preview no WhatsApp       | `og.png`               | 1200 x 630           |        |
+
+O jeito mais rápido de trocar: suba a imagem nova **com o mesmo nome** do arquivo
+(pelo GitHub: pasta `img` > Add file > Upload files > arraste > Commit changes).
+O GitHub substitui o arquivo antigo e a Vercel republica em 1 minuto. Nada de código.
+Serve `.jpg`, `.png` ou `.webp`, desde que o nome (com a extensão) seja igual ao da tabela.
+
+## Trocar a imagem de um banner (com outro nome)
 
 1. Suba a imagem na pasta `img/`. Pelo GitHub: entre na pasta `img`,
    clique em **Add file > Upload files**, arraste o arquivo e commite.
