@@ -290,6 +290,25 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;-we
 .banner.capa .botao{background:#FFFFFF;color:#171512;margin-top:6px;padding:15px 20px}
 .banner.capa .marca{display:none}
 
+/* capa em modo ARTE: a imagem aparece inteira e o preço + botão vão numa faixa embaixo */
+.banner.capa[data-modo="arte"] .quadro{aspect-ratio:auto}
+.banner.capa[data-modo="arte"] .quadro img{height:auto}
+.banner.capa[data-modo="arte"] .quadro::after,
+.banner.capa[data-modo="arte"] .selo,
+.banner.capa[data-modo="arte"] .legenda{display:none}
+.banner.capa .faixa{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;
+  padding:16px 18px 18px;background:var(--carta);border-top:1px solid var(--fio);
+}
+.banner.capa .faixa .info{display:flex;flex-direction:column;gap:4px;min-width:0}
+.banner.capa .faixa .preco{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.banner.capa .faixa .preco b{font-size:16px;font-weight:600;color:var(--tinta)}
+.banner.capa .faixa .preco span{font-size:13px;color:var(--tinta-2)}
+.banner.capa .faixa .botao{flex:1 1 200px;width:auto;padding:14px 18px;font-size:14.5px;margin:0;background:var(--botao-fundo);color:var(--botao-texto)}
+
+/* cupom em banner de arte: vai pro canto de cima, pra não cobrir o que a arte já diz */
+.banner[data-modo="arte"] .cupom{top:16px;bottom:auto}
+
 /* espaço reservado quando a imagem ainda não foi enviada */
 .banner.vazio .quadro{aspect-ratio:16/7;display:grid;place-items:center;border:1px dashed var(--fio-forte);border-radius:inherit}
 .banner.vazio .quadro img,.banner.vazio .quadro::after{display:none}
@@ -372,7 +391,7 @@ const CONTEUDO = {
     parcelado: "ou 3x de R$ 34,79",
     botao:     "Quero fazer o curso",
     url:       "https://hotmart.com/pt-br/marketplace/produtos/sua-vida-em-videos-com-capcut/E95068281V",
-    foto:      "img/banner-curso.webp"
+    arte:      "img/vlogs.webp"     // arte pronta, com o título dentro. Para foto em pé com texto por cima, use foto: "img/x.webp"
   },
 
   /* ---- 4. Os links (cada um é um banner clicável) ----------------------
@@ -395,28 +414,26 @@ const CONTEUDO = {
       titulo: "Favoritos da Shopee",
       texto:  "O que eu uso em casa, numa lista só",
       url:    "https://collshp.com/danycarter",
-      arte:   "img/banner-shopee.webp"
+      arte:   "img/shopee.webp"
     },
     {
       titulo: "Dux Nutrition",
       texto:  "15% de desconto com o meu cupom",
       url:    "https://www.duxnutrition.com/?utm_source=influenciadores&utm_medium=affiliate&utm_campaign=DANYCARTTER&cupom=DANYCARTTER",
-      foto:   "img/banner-dux.webp",
-      foco:   "topo",
+      arte:   "img/dux.webp",
       cupom:  "DANYCARTTER"
     },
     {
       titulo: "Podcast Falando Sozinha",
       texto:  "Um café e um papo sem filtro",
       url:    "https://open.spotify.com/show/77YJjl6DhsELsuT4zCybY0?si=a654ae6042ca4ec8",
-      foto:   "img/banner-podcast.webp",
-      foco:   "topo"
+      arte:   "img/podcast.webp"
     },
     {
       titulo: "Meu canal no YouTube",
       texto:  "Casa, faxina, compras e rotina",
       url:    "https://www.youtube.com/channel/UCRXYnblRhsGY33JoMRppiEw",
-      arte:   "img/banner-youtube.webp"
+      arte:   "img/canal.webp"
     }
   ],
 
@@ -479,15 +496,22 @@ const CONTEUDO = {
   // 3. capa
   const d = c.capa;
   if (d && d.titulo) {
-    h += `<a class="banner capa" data-modo="foto" data-titulo="${esc(d.titulo)}" data-arquivo="${esc(d.foto)}" href="${esc(d.url)}" target="_blank" rel="noopener">
-      <div class="quadro"><img src="${esc(d.foto)}" alt="" fetchpriority="high"></div>
+    const modoCapa = d.arte ? "arte" : "foto";
+    const imgCapa = d.arte || d.foto || "";
+    const precoHtml = (d.preco || d.parcelado) ? `<div class="preco">${d.preco ? `<b>${esc(d.preco)}</b>` : ""}${d.parcelado ? `<span>${esc(d.parcelado)}</span>` : ""}</div>` : "";
+    h += `<a class="banner capa" data-modo="${modoCapa}" data-titulo="${esc(d.titulo)}" data-arquivo="${esc(imgCapa)}" href="${esc(d.url)}" target="_blank" rel="noopener" aria-label="${esc(d.titulo)}">
+      <div class="quadro"><img src="${esc(imgCapa)}" alt="" fetchpriority="high"></div>
       ${d.selo ? `<span class="selo">${esc(d.selo)}</span>` : ""}
       <div class="legenda">
         <strong>${esc(d.titulo)}</strong>
         ${d.texto ? `<p>${esc(d.texto)}</p>` : ""}
-        ${(d.preco || d.parcelado) ? `<div class="preco">${d.preco ? `<b>${esc(d.preco)}</b>` : ""}${d.parcelado ? `<span>${esc(d.parcelado)}</span>` : ""}</div>` : ""}
+        ${precoHtml}
         <span class="botao">${esc(d.botao || "Saiba mais")}${SETA}</span>
       </div>
+      ${modoCapa === "arte" && (d.preco || d.parcelado || d.botao) ? `<div class="faixa">
+        <div class="info">${d.selo ? `<span class="rotulo">${esc(d.selo)}</span>` : ""}${precoHtml}</div>
+        ${d.botao ? `<span class="botao">${esc(d.botao)}${SETA}</span>` : ""}
+      </div>` : ""}
     </a>`;
   }
 

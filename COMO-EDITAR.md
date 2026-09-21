@@ -145,15 +145,20 @@ quando a pessoa toca.
 
 ## Qual arquivo é qual banner
 
-| Banner                    | Arquivo em `img/`      | Tamanho ideal        | Modo   |
-|---------------------------|------------------------|----------------------|--------|
-| Foto do topo              | `dany.webp`            | 900 x 1250, sem fundo | foto  |
-| Capa (curso)              | `banner-curso.webp`    | 800 x 1000 (em pé)   | foto   |
-| Favoritos da Shopee       | `banner-shopee.webp`   | 920 x 400            | arte   |
-| Dux Nutrition             | `banner-dux.webp`      | 920 x 400            | foto   |
-| Podcast Falando Sozinha   | `banner-podcast.webp`  | 920 x 400            | foto   |
-| Meu canal no YouTube      | `banner-youtube.webp`  | 920 x 400            | arte   |
-| Preview no WhatsApp       | `og.png`               | 1200 x 630           |        |
+| Banner                    | Arquivo em `img/`  | Tamanho ideal          | Modo   |
+|---------------------------|--------------------|------------------------|--------|
+| Foto do topo              | `dany.webp`        | 900 x 1250, sem fundo  | foto   |
+| Capa (curso)              | `vlogs.webp`       | 1754 x 897 (2:1)       | arte   |
+| Favoritos da Shopee       | `shopee.webp`      | 1754 x 897 (2:1)       | arte   |
+| Dux Nutrition             | `dux.webp`         | 1754 x 897 (2:1)       | arte   |
+| Podcast Falando Sozinha   | `podcast.webp`     | 1754 x 897 (2:1)       | arte   |
+| Meu canal no YouTube      | `canal.webp`       | 1754 x 897 (2:1)       | arte   |
+| Preview no WhatsApp       | `og.png`           | 1200 x 630             |        |
+
+Hoje todos os banners usam **arte pronta** (o texto já vem dentro da imagem).
+A capa também aceita `arte`: a imagem aparece inteira e o preço + botão ficam
+numa faixa embaixo. Se um dia quiser uma capa em pé com o texto escrito por cima,
+troque `arte:` por `foto:` e mande uma imagem 800 x 1000.
 
 O jeito mais rápido de trocar: suba a imagem nova **com o mesmo nome** do arquivo
 (pelo GitHub: pasta `img` > Add file > Upload files > arraste > Commit changes).
